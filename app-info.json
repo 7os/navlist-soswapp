@@ -1,0 +1,14 @@
+{
+  "name" : "7os/navlist-soswapp",
+  "basepath" : "/navlist",
+  "description" : "Returns JSON data og project's navigation list",
+  "homepage" : "https://github.com/7os/navlist-soswapp",
+  "support" : {
+    "email" : "dev@tymfrontiers.com",
+    "website" : "https://tymfrontiers.com",
+    "kollabo" : "@tymfrontiers",
+    "twitter" : "@tymfrontiers",
+    "facebook" : "@tymfrontiers",
+    "istagram" : "@tymfrontiers"
+  }
+}
