@@ -57,12 +57,12 @@ if (!\array_key_exists($nav_group,$navlist)) {
 }
 // \var_dump($navlist->$nav_group);
 $nav_output = [];
-foreach ($navlist->$nav_group as $index=>$link) {
+foreach ($navlist->$nav_group as $path=>$link) {
   if ($link->access_rank <= $rank ) {
     $nav_output[] = [
       "title" => $link->title,
-      "path" => $link->path,
-      "link" => WHOST . $link->path,
+      "path" => $path,
+      "link" => WHOST . $path,
       "onclick" => $link->onclick,
       "icon" => $link->icon,
       "name" => $link->name,
