@@ -58,7 +58,10 @@ if (!\array_key_exists($nav_group,$navlist)) {
 // \var_dump($navlist->$nav_group);
 $nav_output = [];
 foreach ($navlist->$nav_group as $path=>$link) {
-  if ($link->access_rank <= $rank ) {
+  if (
+    ((bool)$link->strict_access && $link->access_rank == $rank)
+    || (!(bool)$link->strict_access && $link->access_rank <= $rank)
+  ) {
     $nav_output[] = [
       "title" => $link->title,
       "path" => $path,
