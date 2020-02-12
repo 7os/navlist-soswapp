@@ -47,7 +47,7 @@ if (!$navlist) {
   exit;
 }
 $nav_group = $params['group'];
-if (!\array_key_exists($nav_group,$navlist)) {
+if (!\property_exists($navlist, $nav_group)) {
   echo \json_encode([
     "status" => "3.1",
     "errors" => ["No list found for navigation [group] '{$params['group']}'."],
